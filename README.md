@@ -189,5 +189,5 @@ Youtube-Downloader/
 ---
 
 <p align="center">
-  Made with ❤️ by <b>-SumitKumar</b>
+  Made with ❤️ by <b>SumitKumar</b>
 </p>
