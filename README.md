@@ -1,46 +1,39 @@
+<p align="center">
+  <img src="assets/sumit.png" alt="SUMIT" width="520">
+</p>
+
+<p align="center">
+  <b>Interactive terminal tools for GitHub Codespaces</b><br>
+  Download YouTube videos and share files anonymously, all with arrow keys.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/yt--dlp-powered-red" alt="yt-dlp">
+  <img src="https://img.shields.io/badge/ffmpeg-required-green" alt="ffmpeg">
+  <img src="https://img.shields.io/badge/Gofile-anonymous-00b0ff" alt="Gofile">
+</p>
+
+---
+
+<h2 align="center">What's inside</h2>
+
 <div align="center">
 
-```
-███████╗██╗   ██╗███╗   ███╗██╗████████╗
-██╔════╝██║   ██║████╗ ████║██║╚══██╔══╝
-███████╗██║   ██║██╔████╔██║██║   ██║   
-╚════██║██║   ██║██║╚██╔╝██║██║   ██║   
-███████║╚██████╔╝██║ ╚═╝ ██║██║   ██║   
-╚══════╝ ╚═════╝ ╚═╝     ╚═╝╚═╝   ╚═╝   
-```
-
-**Interactive terminal tools for GitHub Codespaces**
-
-Download YouTube videos and share files anonymously, all with arrow keys.
-
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)
-![yt-dlp](https://img.shields.io/badge/yt--dlp-powered-red)
-![ffmpeg](https://img.shields.io/badge/ffmpeg-required-green)
-![Gofile](https://img.shields.io/badge/Gofile-anonymous-00b0ff)
+| Command | File | What it does |
+|:-------:|:----:|:-------------|
+| `yt` | `dl.py` | Search or paste a link, pick a quality, download as **MP4** |
+| `share` | `share.py` | Pick a file with arrow keys, upload to **Gofile**, get a link |
 
 </div>
 
 ---
 
-## What's inside
+<p align="center">
+  <img src="assets/youtube.png" alt="YOUTUBE" width="640">
+</p>
 
-| Command | File | What it does |
-|---------|------|--------------|
-| `yt` | `dl.py` | Search or paste a link, pick a quality, download as **MP4** |
-| `share` | `share.py` | Pick a file with arrow keys, upload to **Gofile**, get a link |
-
----
-
-## 🎬 YouTube Downloader (`yt`)
-
-```
-██╗   ██╗ ██████╗ ██╗   ██╗████████╗██╗   ██╗██████╗ ███████╗
-╚██╗ ██╔╝██╔═══██╗██║   ██║╚══██╔══╝██║   ██║██╔══██╗██╔════╝
- ╚████╔╝ ██║   ██║██║   ██║   ██║   ██║   ██║██████╔╝█████╗  
-  ╚██╔╝  ██║   ██║██║   ██║   ██║   ██║   ██║██╔══██╗██╔══╝  
-   ██║   ╚██████╔╝╚██████╔╝   ██║   ╚██████╔╝██████╔╝███████╗
-   ╚═╝    ╚═════╝  ╚═════╝    ╚═╝    ╚═════╝ ╚═════╝ ╚══════╝
-```
+<h2 align="center">🎬 YouTube Downloader (<code>yt</code>)</h2>
 
 ### Features
 
@@ -64,16 +57,11 @@ yt
 
 ---
 
-## 📤 Gofile Uploader (`share`)
+<p align="center">
+  <img src="assets/gofile.png" alt="GOFILE" width="540">
+</p>
 
-```
- ██████╗  ██████╗ ███████╗██╗██╗     ███████╗
-██╔════╝ ██╔═══██╗██╔════╝██║██║     ██╔════╝
-██║  ███╗██║   ██║█████╗  ██║██║     █████╗  
-██║   ██║██║   ██║██╔══╝  ██║██║     ██╔══╝  
-╚██████╔╝╚██████╔╝██║     ██║███████╗███████╗
- ╚═════╝  ╚═════╝ ╚═╝     ╚═╝╚══════╝╚══════╝
-```
+<h2 align="center">📤 Gofile Uploader (<code>share</code>)</h2>
 
 ### Features
 
@@ -100,7 +88,7 @@ share
 
 ---
 
-## ⚙️ Setup
+<h2 align="center">⚙️ Setup</h2>
 
 ### 1. Install ffmpeg and yt-dlp
 
@@ -122,15 +110,15 @@ If pip shows an `externally-managed-environment` error, add `--break-system-pack
 ```bash
 mkdir -p ~/.local/bin
 
-cat > ~/.local/bin/yt << 'EOF'
+cat > ~/.local/bin/yt << 'EOT'
 #!/bin/bash
 python3 /workspaces/Youtube-Downloader/dl.py "$@"
-EOF
+EOT
 
-cat > ~/.local/bin/share << 'EOF'
+cat > ~/.local/bin/share << 'EOT'
 #!/bin/bash
 python3 /workspaces/Youtube-Downloader/share.py "$@"
-EOF
+EOT
 
 chmod +x ~/.local/bin/yt ~/.local/bin/share
 ```
@@ -141,7 +129,7 @@ Now `yt` and `share` work from any folder. Videos are saved in the folder you ru
 
 ---
 
-## 🍪 Fixing "Sign in to confirm you're not a bot"
+<h2 align="center">🍪 Fixing "Sign in to confirm you're not a bot"</h2>
 
 YouTube often blocks cloud IPs like Codespaces. The fix is a `cookies.txt` file:
 
@@ -163,30 +151,36 @@ Delete it when you're done: `rm cookies.txt`
 
 ---
 
-## 📁 Project structure
+<h2 align="center">📁 Project structure</h2>
 
 ```
 Youtube-Downloader/
-├── dl.py          # YouTube downloader  (command: yt)
-├── share.py       # Gofile uploader     (command: share)
-├── cookies.txt    # optional, keep private
+├── assets/
+│   ├── sumit.png      # README banners
+│   ├── youtube.png
+│   └── gofile.png
+├── dl.py              # YouTube downloader  (command: yt)
+├── share.py           # Gofile uploader     (command: share)
+├── cookies.txt        # optional, keep private
 ├── .gitignore
 └── README.md
 ```
 
 ---
 
-## 🧰 Built with
+<h2 align="center">🧰 Built with</h2>
 
-- [yt-dlp](https://github.com/yt-dlp/yt-dlp): video extraction and download
-- [ffmpeg](https://ffmpeg.org): merging video and audio into MP4
-- [rich](https://github.com/Textualize/rich): colours, banners, progress bars
-- [questionary](https://github.com/tmbo/questionary): arrow-key menus
-- [Gofile](https://gofile.io): anonymous file hosting
+<p align="center">
+  <a href="https://github.com/yt-dlp/yt-dlp">yt-dlp</a> •
+  <a href="https://ffmpeg.org">ffmpeg</a> •
+  <a href="https://github.com/Textualize/rich">rich</a> •
+  <a href="https://github.com/tmbo/questionary">questionary</a> •
+  <a href="https://gofile.io">Gofile</a>
+</p>
 
 ---
 
-## ⚠️ Notes
+<h2 align="center">⚠️ Notes</h2>
 
 - Downloading YouTube videos may violate YouTube's Terms of Service. Only download content you have the right to use.
 - Anyone with a Gofile link can download the file, and Gofile may delete old or inactive anonymous uploads. Don't use it as permanent storage.
@@ -194,8 +188,6 @@ Youtube-Downloader/
 
 ---
 
-<div align="center">
-
-Made by **-SumitKumar**
-
-</div>
+<p align="center">
+  Made with ❤️ by <b>-SumitKumar</b>
+</p>
